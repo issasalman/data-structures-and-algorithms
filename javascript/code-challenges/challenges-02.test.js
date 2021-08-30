@@ -29,7 +29,7 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 
 const addOne = (arr) => {
    let arr1=[];
-  arr.forEach(element => {
+  arr.map(element => {
     arr1.push(element+1);
     
   });
@@ -44,7 +44,7 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 
 const addQuestion = (arr) => {
   let arr1=[];
-  arr.forEach(element => {
+  arr.map(element => {
     arr1.push(element+"?");
     
   });
