@@ -28,9 +28,9 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
-   let arr1=[];
-  arr.map(element => {
-    arr1.push(element+1);
+   
+  let arr1=arr.map(element => {
+    return(element+1);
     
   });
   return arr1;
@@ -43,9 +43,9 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 ------------------------------------------------------------------------------------------------ */
 
 const addQuestion = (arr) => {
-  let arr1=[];
-  arr.map(element => {
-    arr1.push(element+"?");
+  
+  let arr1=arr.map(element => {
+    return (element + "?");
     
   });
   return arr1;
@@ -93,9 +93,9 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  const arr1=[];
-  arr.map(element =>{
-   arr1.push(Math.pow(2,element));
+  
+  let arr1= arr.map(element =>{
+   return(Math.pow(2,element));
    
   })
    return arr1;
