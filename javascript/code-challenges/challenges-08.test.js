@@ -66,7 +66,9 @@ Write a function named containsW that takes in a string. This function should us
 ------------------------------------------------------------------------------------------------ */
 
 const containsW = (str) => {
-  // Solution code here...
+  let regex=/w/g
+  let testLowerw=regex.test(str)
+  return testLowerw
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -82,7 +84,9 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  // Solution code here...
+  let regex=/\d/g
+  let testNum=regex.test(input)
+  return testNum
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -93,7 +97,9 @@ Write a function named containsWorld that takes in a string or number of any len
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
-  // Solution code here...
+  let regex=/world/g
+  let testWorld=regex.test(input)
+  return testWorld
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -105,8 +111,17 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  
+  let regex = /\b[A-Z](\w)*/g;
+  let testCap = str.match(regex);
+  if (testCap) {
+    return testCap;
+  } else {
+    return [];
+  }
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -114,9 +129,20 @@ CHALLENGE 6
 Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
 
+
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+ 
+  let arr1 = [];
+  for (let i = 0; i < arr.length; i++) {
+    let value = /^([A-J][a-zA-Z]+)$/g.test(arr[i]);
+    if (value) {
+      arr1.push(arr[i]);
+    }
+  }
+  return arr1;
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
