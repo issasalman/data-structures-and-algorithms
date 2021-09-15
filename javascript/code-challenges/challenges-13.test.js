@@ -7,8 +7,19 @@ Write a function named longestString that takes in an array of strings and retur
 ------------------------------------------------------------------------------------------------ */
 
 const longestString = (arr) => {
-// Solution code here...
-};
+  let test = 0;
+  let longArr;
+  if (arr.length){
+    arr.forEach((string, index) => {
+      if (string.split("").length > test) {
+        longArr = index;
+        test = string.split("").length ;
+      }
+    }) ;
+    return longArr;
+  } return -1 ;
+
+} ;
   
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -19,9 +30,8 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 ------------------------------------------------------------------------------------------------ */
 
 const firstLetters = (arr) => {
-  // Solution code here...
+  return arr.map(firstLetter => firstLetter.charAt(0)) ;
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -31,8 +41,9 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 ------------------------------------------------------------------------------------------------ */
 
 const findHappiness = (arr) => {
-  // Solution code here...
-};
+  return arr.filter(str => str.includes(":)"));
+
+} ;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -43,7 +54,12 @@ For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 const standardizePhoneNumbers = (arr) => {
-  // Solution code here...
+  let arr1 = arr.map(str =>
+    str.substring(1, 4) + str.substring(6, 9) + str.substring(10 ,14)
+  );
+  
+  return arr1 ;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,8 +71,13 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-  // Solution code here...
-};
+  return str.split('').filter((odd, index) =>{
+    if (index % 2 !== 0){
+      return odd ;
+    }
+  }).join('') ;
+
+} ;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 
@@ -65,7 +86,15 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
-  // Solution code here...
+  let test = true;
+  arr.map(value =>{
+    if (!value.includes(":)") ) {
+      test = false ;
+    }
+  }) ;
+
+  return test;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
