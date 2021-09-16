@@ -11,8 +11,10 @@ Write a function named screenForNames that takes in an array of strings and uses
 ------------------------------------------------------------------------------------------------ */
 
 const screenForNames = (arr) => {
-  // Solution code here...
-}
+  let string = /^(Mr.|Mrs.|Ms.|Dr.)[ ][a-zA-Z]+/;
+  return arr.filter(string1 =>
+    string.test(string1));
+} ;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -23,7 +25,11 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 ------------------------------------------------------------------------------------------------ */
 
 const toTitleCase = (arr) => {
-  // Solution code here...
+  return arr.map(name => {
+    name = name.split('');
+    name[0] = name[0].toUpperCase();
+    return name.join('');
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -98,7 +104,7 @@ let starWarsData = [{
 }];
 
 let biggerThanLuke = (arr) => {
-  // Solution code here...
+  return arr.filter(name => parseInt(name.mass) > 77).map(name => name.name).join(" - ");
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -116,8 +122,23 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  // Solution code here...
-};
+  arr.sort((low, high) => {
+    if (low[property] > high[property]) {
+      return true;
+    }
+
+    else if (high[property] > low[property]) {
+      return -1 ;
+    }
+
+    else {
+      return false ;
+    }
+
+  }
+  ) ;
+  return arr ;
+} ;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 
@@ -132,7 +153,8 @@ https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
-  // Solution code here...
+  let name = /(https:\/\/)/;
+  return name.test(url);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -155,7 +177,14 @@ Here is a sample board:
 ------------------------------------------------------------------------------------------------ */
 
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+  return (board[0][0] === board[0][1] && board[0][1] === board[0][2] && (board[0][2] === 'X' || board[0][2] === 'O'))||
+  (board[1][0] === board[1][1] && board[1][1] === board[1][2] && (board[1][2] === 'X' || board[1][2] === 'O'))||
+  (board[2][0] === board[2][1] && board[2][1] === board[2][2] && (board[2][2] === 'X' || board[2][2] === 'O'))||
+  (board[0][0] === board[1][0] && board[1][0] === board[2][0] && (board[2][0] === 'X' || board[2][0] === 'O'))||
+  (board[0][1] === board[1][1] && board[1][1] === board[2][1] && (board[2][1] === 'X' || board[2][1] === 'O'))||
+  (board[0][2] === board[1][2] && board[1][2] === board[2][2] && (board[2][2] === 'X' || board[2][2] === 'O'))||
+  (board[0][0] === board[1][1] && board[1][1] === board[2][2] && (board[2][2] === 'X' || board[2][2] === 'O'))||
+  (board[0][2] === board[1][1] && board[1][1] === board[2][0] && (board[2][0] === 'X' || board[2][0] === 'O')) ;
 };
 
 /* ------------------------------------------------------------------------------------------------
