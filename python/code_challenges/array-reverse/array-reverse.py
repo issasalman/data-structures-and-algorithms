@@ -5,7 +5,9 @@ def reverse():
     """
     This function is to reverse any elements
     """
+
     print(arr1[::-1])
+    return arr1[::-1]
 
 
 if __name__=="__main__":
