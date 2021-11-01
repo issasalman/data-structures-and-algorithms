@@ -1,8 +1,7 @@
 # Insert to Middle of an Array
-<!-- Description of the challenge -->
-
+Its a function that takes an element and add it to the middle of the array 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+![challenge2](array-insert-shift.JPG)
 
 ## Approach & Efficiency
-<!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
+The Efficiency of Big O is O(n)
