@@ -1,5 +1,3 @@
-
-
 def reverseArray(arr1):
     """
     This function is to reverse any elements
