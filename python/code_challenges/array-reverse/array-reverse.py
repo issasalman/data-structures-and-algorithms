@@ -1,6 +1,6 @@
 arr1=list(input())
 
-def reverse():
+def reverseArray():
 
     """
     This function is to reverse any elements
@@ -11,5 +11,5 @@ def reverse():
 
 
 if __name__=="__main__":
-    reverse()
+    reverseArray()
 
