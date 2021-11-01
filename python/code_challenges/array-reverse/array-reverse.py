@@ -14,18 +14,16 @@ def reverseArray(arr1):
 
         j = len(arr1)-1
 
-        while i <= j:
+        while i < j:
 
-          item=arr1[i]
-          arr1[i]=arr1[j]
-          arr1[j]=item
+          arr1[i],arr1[j]=arr1[j],arr1[i]
 
           i += 1
           j -= 1
 
-          print(arr1)
-          return arr1
+        print(arr1)
+        return arr1
 
 
 
-print(reverseArray([5,1,4,7,8,9]))
+print(reverseArray([5,1,4,7,8,9,5,8]))
