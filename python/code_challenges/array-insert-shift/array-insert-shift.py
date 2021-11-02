@@ -3,7 +3,11 @@ def insertShiftArray(arr,n):
 
     for i in arr:
         arrayLength+=1
-    middleIndex=int(arrayLength/2)
+    if arrayLength%2==0:
+         middleIndex=int(arrayLength/2)
+    else:
+         middleIndex=int(arrayLength/2+1)
+
     arr1=[None]*(arrayLength+1)
     arr1[middleIndex]=n
     for index,i in enumerate(arr):
@@ -19,5 +23,5 @@ def insertShiftArray(arr,n):
     return arr
 
 
-print(insertShiftArray([1,1,1,1,1,1,5],99))
+print(insertShiftArray([1,1,1,1],99))
 
