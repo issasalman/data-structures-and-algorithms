@@ -1,5 +1,20 @@
 # Data Structures and Algorithms
 
+
+
+
+## Table of contents
+
+
+## python
+| File Name | Link |
+| --------------- | --------------- |
+| Code challenge1 | [ array reverse ](https://github.com/issasalman/data-structures-and-algorithms/tree/main/python/code_challenges/array-reverse) |
+| Code challenge2 | [ array insert shift ](https://github.com/issasalman/data-structures-and-algorithms/tree/main/python/code_challenges/array-insert-shift) |
+
+
+
+
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
 
 ## Repository Quick Tour and Usage
