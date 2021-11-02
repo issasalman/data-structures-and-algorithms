@@ -9,8 +9,8 @@
 ## python
 | File Name | Link |
 | --------------- | --------------- |
-| Code challenge1 | [ array reverse ](https://github.com/issasalman/data-structures-and-algorithms/tree/main/python/code_challenges/array-reverse) |
-| Code challenge2 | [ array insert shift ](https://github.com/issasalman/data-structures-and-algorithms/tree/main/python/code_challenges/array-insert-shift) |
+| Code challenge1 | [ array reverse ](python/code_challenges/array-reverse/README.md) |
+| Code challenge2 | [ array insert shift ](python/code_challenges/array-insert-shift/README.md) |
 
 
 
