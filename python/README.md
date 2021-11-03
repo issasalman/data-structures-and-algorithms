@@ -1,17 +1,6 @@
 # Data Structures and Algorithms
 
 
-
-## Table of contents
-
-| File Name | Link |
-| --------------- | --------------- |
-| Code challenge1 | [ array reverse ](python/code_challenges/array-reverse/README.md) |
-| Code challenge2 | [ array insert shift ](python/code_challenges/array-insert-shift/README.md) |
-| Code challenge3 | [ array binary search ](python/code_challenges/array-binary-search/README.md) |
-
-
-
 ## Language: `Python`
 
 ### Folder and Challenge Setup
