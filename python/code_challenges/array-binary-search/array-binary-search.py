@@ -1,4 +1,4 @@
-def binary(array,number):
+def BinarySearch  (array,number):
 
   end=len(array)-1
   start=0
@@ -16,4 +16,4 @@ def binary(array,number):
   return -1
 
 
-print(binary([1,5,74,7,7],74))
+print(BinarySearch ([50,10,60,5,97],97))
