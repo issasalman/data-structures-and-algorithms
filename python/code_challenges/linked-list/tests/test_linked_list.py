@@ -29,12 +29,7 @@ def test_head_pointing_to_next_node():
 
 
 def test_multi_values_added(ll):
-    ll.append(True)
-    ll.append("Salman")
-    ll.append(54)
-    ll.append(87)
-
-    expected = 4
+    expected = 3
     actual = ll.countering()
     assert expected == actual
 
