@@ -37,30 +37,33 @@ class LinkedList:
         return cls.counter
 
     def __str__(self):
-        output = "head -> "
+        output = ""
         if self.head is None:
             output += None
         else:
             current = self.head
             while(current):
-                output += f"{current.value} -> "
+
+                output += ("{"+str(current.value)+"}"+" -> ")
                 current = current.next
             output += "None"
             return output
+
+
     def search(self, valueSearched):
-
-
         current = self.head
+        if self.head!=None:
+            while current.next != None:
+                if current.value == valueSearched:
+                    print ("true")
+                    return True
 
-
-        while current != None:
-            if current.value == valueSearched:
-                print ("true")
-                return True
-
-            current = current.next
-        print ("false")
-        return False
+                current = current.next
+            print ("false")
+            return False
+        else:
+            print ("Empty")
+            return ("Empty")
 
 
 if __name__ == '__main__':
@@ -72,7 +75,7 @@ if __name__ == '__main__':
     ll.append('Issa')
     ll.append(4)
     print(ll)
-    ll.search(4)
+    ll.search(100)
 
 
 
