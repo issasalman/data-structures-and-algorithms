@@ -23,7 +23,7 @@ def test_inserting_one_value():
 def test_head_pointing_to_next_node():
     ll = LinkedList()
     ll.append(3)
-    expected = 'head -> 3 -> None'
+    expected = '{3} -> None'
     actual = ll.__str__()
     assert expected == actual
 
@@ -38,7 +38,7 @@ def test_multi_values_added(ll):
 
 
 def test_all_values_in_LL(ll):
-    expected = 'head -> 10 -> Issa -> 500 -> None'
+    expected = '{10} -> {Issa} -> {500} -> None'
     actual = ll.__str__()
     assert expected == actual
 
