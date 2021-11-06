@@ -31,6 +31,14 @@ class LinkedList:
             current.next = node
             return "value added"
 
+    def insert(self, valueAdded):
+        node = Node(valueAdded)
+
+        node.next = self.head
+
+        self.head = node
+
+        return "value added"
 
     @classmethod
     def countering(cls):
@@ -71,9 +79,11 @@ if __name__ == '__main__':
     ll = LinkedList()
 
 
-    ll.append(100)
-    ll.append('Issa')
-    ll.append(4)
+    ll.insert(100)
+    ll.insert('Issa')
+    ll.insert(4)
+    ll.append(5)
+
     print(ll)
     ll.search(100)
 

@@ -15,14 +15,14 @@ def test_empty_linked_list():
 
 def test_inserting_one_value():
     ll = LinkedList()
-    ll.append(3)
+    ll.insert(3)
     expected = "value added"
-    actual = ll.append(3)
+    actual = ll.insert(3)
     assert expected == actual
 
 def test_head_pointing_to_next_node():
     ll = LinkedList()
-    ll.append(3)
+    ll.insert(3)
     expected = '{3} -> None'
     actual = ll.__str__()
     assert expected == actual
@@ -30,6 +30,10 @@ def test_head_pointing_to_next_node():
 
 def test_multi_values_added(ll):
     ll.append(True)
+    ll.append("Salman")
+    ll.append(54)
+    ll.append(87)
+
     expected = 4
     actual = ll.countering()
     assert expected == actual
@@ -38,7 +42,7 @@ def test_multi_values_added(ll):
 
 
 def test_all_values_in_LL(ll):
-    expected = '{10} -> {Issa} -> {500} -> None'
+    expected = '{500} -> {Issa} -> {10} -> None'
     actual = ll.__str__()
     assert expected == actual
 
@@ -63,8 +67,8 @@ def test_value_not_found(ll):
 @pytest.fixture
 def ll():
     ll = LinkedList()
-    ll.append(10)
-    ll.append('Issa')
-    ll.append(500)
+    ll.insert(10)
+    ll.insert('Issa')
+    ll.insert(500)
 
     return ll
