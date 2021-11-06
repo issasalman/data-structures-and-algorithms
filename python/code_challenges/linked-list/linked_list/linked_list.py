@@ -34,9 +34,16 @@ class LinkedList:
     def insert(self, valueAdded):
         node = Node(valueAdded)
 
-        node.next = self.head
+        if self.head:
 
-        self.head = node
+            LinkedList.counter += 1
+
+            node.next = self.head
+
+            self.head = node
+        else:
+
+            self.head = node
 
         return "value added"
 
