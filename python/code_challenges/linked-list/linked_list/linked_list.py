@@ -17,6 +17,9 @@ class LinkedList:
 
 
     def append(self, valueAdded):
+        """
+        Method to add values to the end of nodes
+        """
 
         node = Node(valueAdded)
         if self.head is None:
@@ -32,6 +35,9 @@ class LinkedList:
             return "value added"
 
     def insert(self, valueAdded):
+        """
+        Method to add values at the beginning  nodes
+        """
         node = Node(valueAdded)
 
         if self.head:
@@ -49,9 +55,15 @@ class LinkedList:
 
     @classmethod
     def countering(cls):
+        """
+        method to count the number of values added
+        """
         return cls.counter
 
     def __str__(self):
+        """
+        method to print and display the   values added
+        """
         output = ""
         if self.head is None:
             output += None
@@ -65,7 +77,10 @@ class LinkedList:
             return output
 
 
-    def search(self, valueSearched):
+    def includes(self, valueSearched):
+        """
+        method to search for a specifc value
+        """
         current = self.head
         if self.head!=None:
             while current.next != None:
@@ -92,7 +107,4 @@ if __name__ == '__main__':
     ll.append(5)
 
     print(ll)
-    ll.search(100)
-
-
-
+    ll.includes(100)
