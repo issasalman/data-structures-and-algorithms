@@ -22,6 +22,8 @@ class LinkedList:
         """
 
         node = Node(valueAdded)
+
+
         if self.head is None:
             self.head = node
 
@@ -33,6 +35,52 @@ class LinkedList:
             LinkedList.counter += 1
             current.next = node
             return "value added"
+    def insert_before(self,val,valueAdded):
+        """
+        Method to add values before a specifc node
+        """
+        node=Node(valueAdded)
+        if self.head == None:
+            self.head = node
+        else:
+            current=self.head
+
+        while current.next != None:
+            if current.value == val:
+                node.next=self.head
+                self.head=node
+                break
+            if current.next.value == val:
+                node.next = current.next
+                current.next = node
+                break
+
+            else:
+                current = current.next
+
+
+    def insert_after(self, val, valueAdded):
+
+        """
+        Method to add values after a specifc node
+        """
+        node=Node(valueAdded)
+
+
+        if self.head is None:
+            self.head = node
+        else:
+            current=self.head
+
+            while current.next != None:
+                current = current.next
+
+                if current.value == val:
+                    node.next = current.next
+                    current.next = node
+                    break
+
+
 
     def insert(self, valueAdded):
         """
@@ -64,14 +112,14 @@ class LinkedList:
         """
         method to print and display the   values added
         """
-        output = ""
+        output = "head -> "
         if self.head is None:
             output += None
         else:
             current = self.head
             while(current):
 
-                output += ("{"+str(current.value)+"}"+" -> ")
+                output += ("["+str(current.value)+"]"+" -> ")
                 current = current.next
             output += "None"
             return output
@@ -101,10 +149,16 @@ if __name__ == '__main__':
     ll = LinkedList()
 
 
-    ll.insert(100)
-    ll.insert('Issa')
-    ll.insert(4)
     ll.append(5)
+    ll.append(4)
+    ll.append(3)
 
+    ll.append(52)
+
+
+    ll.insert_after(52,30)
     print(ll)
     ll.includes(100)
+
+
+
