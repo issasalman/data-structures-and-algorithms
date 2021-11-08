@@ -124,6 +124,31 @@ class LinkedList:
             output += "None"
             return output
 
+    def kthFromEnd(self, k):
+        """
+        This method is to return the index of a given value start counting the index from tail
+        """
+        current = self.head
+        length = 0
+        while current != None:
+            current = current.next
+            length += 1
+
+        if k <0:
+            print ("Please input positive numbers")
+            return ("Please input positive numbers")
+
+        if k > length:
+
+            print('k is greater than the length of the linked list')
+            return ('k is greater than the length of the linked list')
+        current = self.head
+        print(length)
+
+        for i in range(0, length - k -1):
+            current = current.next
+        print(current.value)
+        return(current.value)
 
     def includes(self, valueSearched):
         """
@@ -152,11 +177,10 @@ if __name__ == '__main__':
     ll.append(5)
     ll.append(4)
     ll.append(3)
-
+    ll.append(508)
     ll.append(52)
+    ll.kthFromEnd(-8)
 
-
-    ll.insert_after(52,30)
     print(ll)
     ll.includes(100)
 
