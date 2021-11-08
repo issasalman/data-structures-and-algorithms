@@ -1,3 +1,37 @@
+# code-challenge 7
+# Singly Linked List
+
+
+Create Node class and Linked list class to add new node at the end  and insert after or before a node
+
+
+## Whiteboard Process
+![code1](linked_list/linked-list-kth.JPG)
+
+
+
+## Challenge
+its a challenge to make Linked list and start adding nodes that has a value and return an index of a given value start counting from tail
+
+## Approach & Efficiency
+The Efficiency of Big O is O(n)
+
+## API
+We have 3 methods
+1- append method : that used to add new node at the end  to the linked lists
+2- find kth  method: that used to return index of a given value
+
+## Task lists
+- [x] Where k is greater than the length of the linked list
+- [x] Where k and the length of the list are the same
+- [x] Where k is not a positive integer
+- [x] Where the linked list is of a size 1
+- [x] “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+
+
+
+
+
 # code-challenge 6
 # Singly Linked List
 
