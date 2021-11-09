@@ -112,6 +112,23 @@ def test__Happy_Pat_K_is_not_in_middle():
     assert ll.kthFromEnd(3) == 8
 
 
+def test__merging():
+    ll = LinkedList()
+    ll2 = LinkedList()
+
+    ll.append(3)
+    ll.append(8)
+    ll2.append(4)
+    ll2.append(20)
+    ll2.append(3)
+    expected ="head -> [3] -> [4] -> [8] -> [20] -> [3] -> None"
+    ll.zipLists(ll,ll2)
+    actual =   ll.__str__()
+    assert expected == actual
+
+
+
+
 @pytest.fixture
 def ll():
     ll = LinkedList()

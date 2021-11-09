@@ -1,3 +1,38 @@
+# code-challenge 8
+# Singly Linked List
+
+
+Create Node class and Linked list class to add new node at the end  merge two lists into one list
+
+
+## Whiteboard Process
+![code1](linked_list/linked-list-ziplist.JPG)
+
+
+
+## Challenge
+its a challenge to merge two lists into one list in x cross shape starting from fisrt node in list one to first node fro list 2
+
+## Approach & Efficiency
+The Efficiency of Big O is O(n)
+
+## API
+We have 3 methods
+1- append method : that used to add new node at the end  to the linked lists
+2- ziplist  method: that used to merge two lists onto one list
+
+## Task lists
+- [x] Write a function called zip lists
+- [x] Arguments: 2 linked lists
+- [x] Zip the two linked lists together into one so that the nodes alternate between the two lists
+- [x] Try and keep additional space down to O(1)
+- [x] You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+
+
+
+
+
 # code-challenge 7
 # Singly Linked List
 
