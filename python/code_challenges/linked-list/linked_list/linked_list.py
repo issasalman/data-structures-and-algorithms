@@ -150,32 +150,6 @@ class LinkedList:
         print(current.value)
         return(current.value)
 
-    def zipLists(self, list1,list2):
-        """This method is to merge two linked list
-        """
-        current1 = list1.head
-        current2 = list2.head
-
-        if current1 == None:
-            print ("list1 is empty")
-            return (list2)
-        if current2 == None:
-            print ("list2 is empty")
-            return (list1)
-
-        while current1 != None and current2 != None:
-            current1_next = current1.next
-            current2_next = current2.next
-
-            current1.next = current2
-            current2.next = current1_next
-            current1 = current1_next
-            current2 = current2_next
-            if current1.next == None:
-                break
-        if current1:
-            current1.next = current2
-
 
 
 
@@ -197,6 +171,33 @@ class LinkedList:
             print ("Empty")
             return ("Empty")
 
+def zipLists( list1,list2):
+    """This method is to merge two linked list
+    """
+    current1 = list1.head
+    current2 = list2.head
+
+    if current1 == None:
+        print ("list1 is empty")
+        return (list2)
+    if current2 == None:
+        print ("list2 is empty")
+        return (list1)
+
+    while current1 != None and current2 != None:
+        current1_next = current1.next
+        current2_next = current2.next
+
+        current1.next = current2
+        current2.next = current1_next
+        current1 = current1_next
+        current2 = current2_next
+        if current1.next == None:
+            break
+    if current1:
+        current1.next = current2
+    return list1
+
 
 if __name__ == '__main__':
 
@@ -205,13 +206,10 @@ if __name__ == '__main__':
     ll1.append(5)
     ll1.append(4)
     ll1.append(3)
+
     ll2.append(5)
     ll2.append(4)
     ll2.append(3)
     ll2.append(508)
-    ll1.zipLists(ll1,ll2)
-    print(ll1)
+    print(zipLists(ll1,ll2))
     ll1.includes(100)
-
-
-
