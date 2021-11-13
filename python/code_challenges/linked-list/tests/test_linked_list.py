@@ -1,5 +1,5 @@
 from linked_list import __version__
-from linked_list.linked_list import LinkedList, Node
+from linked_list.linked_list import LinkedList, Node,zipLists
 
 import pytest
 
@@ -122,7 +122,8 @@ def test__merging():
     ll2.append(20)
     ll2.append(3)
     expected ="head -> [3] -> [4] -> [8] -> [20] -> [3] -> None"
-    ll.zipLists(ll,ll2)
+
+    zipLists(ll,ll2)
     actual =   ll.__str__()
     assert expected == actual
 
