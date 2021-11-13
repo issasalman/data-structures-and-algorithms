@@ -11,6 +11,9 @@ class Queue:
         self.rear = None
 
     def enqueue(self, value):
+        """
+        to add an item to the rear
+        """
         node = Node(value)
 
         if not self.rear:
@@ -21,6 +24,9 @@ class Queue:
             self.rear = node
 
     def dequeue(self):
+        """
+        to remove an item from the front
+        """
 
         if self.is_empty():
             raise Exception("The queue is empty")
@@ -30,6 +36,9 @@ class Queue:
         return temp.value
 
     def peek(self):
+        """
+        to know the front
+        """
 
         if self.is_empty():
             raise Exception("The queue is empty")
@@ -37,4 +46,7 @@ class Queue:
         return self.front.value
 
     def is_empty(self):
+        """
+        To check if the stack is empty or not
+        """
         return self.front == None
