@@ -13,6 +13,8 @@ def test_empty_linked_list():
     actual = ll.head
     assert expected == actual
 
+
+
 def test_inserting_one_value():
     ll = LinkedList()
     ll.insert(3)
@@ -118,10 +120,12 @@ def test__merging():
 
     ll.append(3)
     ll.append(8)
+    ll.append(8)
+
     ll2.append(4)
     ll2.append(20)
     ll2.append(3)
-    expected ="head -> [3] -> [4] -> [8] -> [20] -> [3] -> None"
+    expected ="head -> [3] -> [4] -> [8] -> [20] -> [8] -> [3] -> None"
 
     zipLists(ll,ll2)
     actual =   ll.__str__()
