@@ -20,11 +20,11 @@ class LinkedList:
         """
         Method to add values to the end of nodes
         """
-
         node = Node(valueAdded)
+        LinkedList.counter += 1
 
 
-        if self.head is None:
+        if self.head == None:
             self.head = node
 
         else:
@@ -32,53 +32,9 @@ class LinkedList:
             while current.next != None:
                 current = current.next
 
-            LinkedList.counter += 1
             current.next = node
             return "value added"
-    def insert_before(self,val,valueAdded):
-        """
-        Method to add values before a specifc node
-        """
-        node=Node(valueAdded)
-        if self.head == None:
-            self.head = node
-        else:
-            current=self.head
 
-        while current.next != None:
-            if current.value == val:
-                node.next=self.head
-                self.head=node
-                break
-            if current.next.value == val:
-                node.next = current.next
-                current.next = node
-                break
-
-            else:
-                current = current.next
-
-
-    def insert_after(self, val, valueAdded):
-
-        """
-        Method to add values after a specifc node
-        """
-        node=Node(valueAdded)
-
-
-        if self.head is None:
-            self.head = node
-        else:
-            current=self.head
-
-            while current.next != None:
-                current = current.next
-
-                if current.value == val:
-                    node.next = current.next
-                    current.next = node
-                    break
 
 
 
@@ -88,18 +44,84 @@ class LinkedList:
         """
         node = Node(valueAdded)
 
-        if self.head:
+        if self.head==None:
+            self.head=node
 
-            LinkedList.counter += 1
-
-            node.next = self.head
-
-            self.head = node
         else:
 
-            self.head = node
+            node.next=self.head
+
+            self.head=node
+
 
         return "value added"
+
+    def insert_before(self, val, valueAdded):
+        node = Node(valueAdded)
+        if self.head==None:
+            self.head=node
+        elif self.head.value == val:
+            node.next = self.head
+            self.head = node
+        else:
+            current = self.head
+
+            while current.next !=None:
+
+                if current.next.value == val:
+                    node.next = current.next
+                    current.next = node
+                    break
+                current = current.next
+
+
+    def insert_after(self, val, valueAdded):
+
+        """
+        Method to add values after a specifc node
+        """
+        node = Node(valueAdded)
+
+        if self.head==None:
+            self.head=node
+
+        elif self.head.value == val:
+            node.next = self.head.next
+            self.head.next = node
+        else:
+            current=self.head
+
+            while current.next != None:
+
+                if current.next.value == val:
+                    current = current.next
+
+                    node.next = current.next
+                    current.next = node
+                    break
+                current = current.next
+
+
+
+    def includes(self, valueSearched):
+        """
+        method to search for a specifc value
+        """
+        current = self.head
+        if self.head!=None:
+            while current.next != None:
+                if current.value == valueSearched:
+                    print ("true")
+                    return True
+
+                current = current.next
+            print ("false")
+            return False
+        else:
+            print ("Empty")
+            return ("Empty")
+
+
 
     @classmethod
     def countering(cls):
@@ -126,7 +148,7 @@ class LinkedList:
 
     def kthFromEnd(self, k):
         """
-        This method is to return the index of a given value start counting the index from tail
+        This method is to return the value of a given index start counting the index from tail
         """
         current = self.head
         length = 0
@@ -143,9 +165,8 @@ class LinkedList:
             print('k is greater than the length of the linked list')
             return ('k is greater than the length of the linked list')
         current = self.head
-        print(length)
 
-        for i in range(0, length - k -1):
+        for i in range(length - k -1):
             current = current.next
         print(current.value)
         return(current.value)
@@ -153,63 +174,52 @@ class LinkedList:
 
 
 
-    def includes(self, valueSearched):
-        """
-        method to search for a specifc value
-        """
-        current = self.head
-        if self.head!=None:
-            while current.next != None:
-                if current.value == valueSearched:
-                    print ("true")
-                    return True
+def zipLists(list1,list2):
+        current1 = list1.head
+        current2 = list2.head
+        if not current1 and not current2:
+            print("The two lists are empty")
+            return 'The two lists are empty'
+        elif  not current1 :
+            print("The first list is empty")
 
-                current = current.next
-            print ("false")
-            return False
-        else:
-            print ("Empty")
-            return ("Empty")
+            return (list2)
+        elif not current2:
+            print("The second list is empty")
 
-def zipLists( list1,list2):
-    """This method is to merge two linked list
-    """
-    current1 = list1.head
-    current2 = list2.head
+            return (list1)
+        while current1!=None and current2!=None:
 
-    if current1 == None:
-        print ("list1 is empty")
-        return (list2)
-    if current2 == None:
-        print ("list2 is empty")
-        return (list1)
 
-    while current1 != None and current2 != None:
-        current1_next = current1.next
-        current2_next = current2.next
+            if current2:
+                temp = current1.next
+                current1.next = current2
+                current1 = temp
+            if current1:
+                temp = current2.next
+                current2.next = current1
+                current2 = temp
 
-        current1.next = current2
-        current2.next = current1_next
-        current1 = current1_next
-        current2 = current2_next
-        if current1.next == None:
-            break
-    if current1:
-        current1.next = current2
-    return list1
+
+
 
 
 if __name__ == '__main__':
 
     ll1 = LinkedList()
     ll2 = LinkedList()
+
     ll1.append(5)
-    ll1.append(4)
-    ll1.append(3)
+    ll1.append(5)
 
     ll2.append(5)
-    ll2.append(4)
-    ll2.append(3)
-    ll2.append(508)
-    print(zipLists(ll1,ll2))
-    ll1.includes(100)
+
+
+
+    zipLists(ll1,ll2)
+    print(ll1)
+
+
+
+
+
