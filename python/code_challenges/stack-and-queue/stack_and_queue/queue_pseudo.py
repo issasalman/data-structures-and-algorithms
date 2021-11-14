@@ -38,6 +38,9 @@ class Pseudo_queue:
             self.stack1.push(temp1)
         return temp2
 
+    def __str__(self):
+        return  self.stack1.__str__()
+
 
 if __name__ == '__main__':
     Pseudo_queue1=Pseudo_queue()
@@ -45,9 +48,7 @@ if __name__ == '__main__':
     Pseudo_queue1.enqueue(5)
     Pseudo_queue1.enqueue(4)
 
-    print(Pseudo_queue1.dequeue())
-    print(Pseudo_queue1.dequeue())
-    print(Pseudo_queue1.dequeue())
+    print(Pseudo_queue1)
 
 
 

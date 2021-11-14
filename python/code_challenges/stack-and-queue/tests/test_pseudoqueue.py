@@ -22,6 +22,17 @@ def test_push_onto_a_stack_psudo():
 
 
 
+def test_str():
+    Pseudo_queue = pseudo()
+    Pseudo_queue.enqueue(2)
+    Pseudo_queue.enqueue("401-python")
+    Pseudo_queue.enqueue("34")
+    actual =  Pseudo_queue.__str__()
+    expected = 'top -> [34] -> [401-python] -> [2] -> None'
+    assert expected == actual
+
+
+
 def test_pop_psudo():
     Pseudo_queue = pseudo()
     Pseudo_queue.enqueue(2)
