@@ -1,3 +1,36 @@
+# Challenge Summary stack-queue-pseudo
+The challenge is to make new queue following FIFO by using two stacks for that
+
+## Whiteboard Process
+![pseudo](stack_and_queue/stack_psuedo.JPG)
+
+## Approach & Efficiency
+To build new queue that FIFO using two stacks
+
+Big O : O(n)
+Space O(n)
+
+## Solution
+
+### enqueue(value)
+
+
+keep transporting the values from stack 1 to stack 2 to get the top value and delete it then transport from stack2 to stack1 again
+```
+
+Input	         Args	   Output
+
+[10]->[15]->[20]	5	[5]->[10]->[15]->[20]
+
+
+```
+### dequeue()
+```
+
+Input	               Output      Internal State
+[5]->[10]->[15]->[20]	20	       [5]->[10]->[15])
+
+```
 # Stacks and Queues
 Stack is a container of objects that are inserted and removed according to the last-in first-out (LIFO) principle. Queue is a container of objects (a linear collection) that are inserted and removed according to the first-in first-out (FIFO) principle.
 
