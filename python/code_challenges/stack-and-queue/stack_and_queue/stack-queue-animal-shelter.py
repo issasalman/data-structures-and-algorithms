@@ -12,7 +12,7 @@ class Animal_Shelter:
 
     def enqueue(self, animal):
         """
-        to add an item to the rear
+        to add an item to the rear.
         """
         if (animal =='dog') :
             self.dog.enqueue(animal)
