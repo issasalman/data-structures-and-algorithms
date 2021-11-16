@@ -46,3 +46,27 @@ class Stack:
         To check if the stack is empty or not
         """
         return self.top == None
+    def __str__(self):
+        """
+        method to print and display the   values added
+        """
+        output = "top -> "
+        if self.top is None:
+            output += None
+        else:
+            current = self.top
+            while(current):
+
+                output += ("["+str(current.value)+"]"+" -> ")
+                current = current.next
+            output += "None"
+            return output
+
+
+
+if __name__ == '__main__':
+    Pseudo_queue1=Stack()
+    Pseudo_queue1.push(6)
+    Pseudo_queue1.push(5)
+    Pseudo_queue1.push(4)
+    print(Pseudo_queue1)
