@@ -2,8 +2,12 @@ from stack_and_queue.Node import Node
 from stack_and_queue.Queue import Queue
 
 
-
 class Animal_Shelter:
+    """
+    Shelter Class For Only Cats and Dogs
+
+
+    """
 
     def __init__(self):
         self.dog=Queue()
@@ -21,7 +25,7 @@ class Animal_Shelter:
             self.cat.enqueue(animal)
             return animal
         else:
-            return 'invalid input'
+            return 'We only accept dogs and cats'
 
 
     def dequeue(self,pref):

@@ -1,3 +1,41 @@
+# Challenge Summary stack-queue-Shelter
+The challenge is to make new queue following FIFO by using two stacks for that
+
+## Whiteboard Process
+![pseudo](stack_and_queue/queue_shelter.JPG)
+
+## Approach & Efficiency
+To build two queues one for cats and one for dogs
+Big O : O(1)
+Space O(n)
+
+## Solution
+
+### enqueue(value)
+## Enqueue or Dequeue depending on  animal type
+
+```
+
+Input	                  Args	          Output
+
+[cat]->[cat]->[cat]      	cat	      [cat]->[cat]->[cat]  ->[cat]
+Input	                              [dog]->[dog]->[dog]->[dog]
+[dog]->[dog]->[dog]->[dog]
+
+```
+### dequeue()
+```
+
+Input	                  Args	          Output
+
+[cat]->[cat]->[cat]      	cat	      [cat]->[cat]
+Input	                              [dog]->[dog]->[dog]->[dog]
+[dog]->[dog]->[dog]->[dog]
+
+```
+
+
+
 # Challenge Summary stack-queue-pseudo
 The challenge is to make new queue following FIFO by using two stacks for that
 
