@@ -1,4 +1,4 @@
-from stack_and_queue.stack_queue_animal_shelter import Animal_Shelter
+from stack_and_queue.stack_queue_animal_shelter import Animal_Shelter ,Dog,Cat
 import pytest
 
 
@@ -8,12 +8,12 @@ def test_enqueue_dog():
     """
     Testing enqueue method for a queue
     """
-    dog_queue = Animal_Shelter()
 
+    animal=Animal_Shelter()
+    Alex=Dog("Alex")
 
-
-    expected = "dog"
-    actual =dog_queue.enqueue("dog")
+    expected = "Alex"
+    actual =animal.enqueue(Alex)
 
     assert expected == actual
 
@@ -22,39 +22,30 @@ def test_enqueue_cat():
     """
     Testing enqueue method for a queue
     """
-    cat_queue = Animal_Shelter()
+    animal=Animal_Shelter()
+    Lucy=Cat("Lucy")
 
-
-
-    expected = "cat"
-    actual =cat_queue.enqueue("cat")
-
+    actual =animal.enqueue(Lucy)
+    expected = "Lucy"
     assert expected == actual
 
 
-
-def test_enqueue_other():
-    """
-    Testing enqueue method for a queue
-    """
-    other_queue = Animal_Shelter()
+#
 
 
-
-    expected = 'We only accept dogs and cats'
-    actual =other_queue.enqueue("wolf")
-
-    assert expected == actual
 
 
 def test_dequeue_cat():
     """
     Testing dequeue method for a queue
     """
-    cat_queue = Animal_Shelter()
-    cat_queue.enqueue("cat")
-    expected = "cat"
-    actual = cat_queue.dequeue("cat")
+    animal=Animal_Shelter()
+    Lucy=Cat("Lucy")
+
+    animal.enqueue(Lucy)
+
+    expected = "Lucy"
+    actual = animal.dequeue("cat")
 
     assert expected == actual
 
@@ -64,25 +55,38 @@ def test_dequeue_dog():
     """
     Testing dequeue method for a queue
     """
-    dog_queue = Animal_Shelter()
-    dog_queue.enqueue("dog")
-    expected = "dog"
-    actual = dog_queue.dequeue("dog")
+    animal=Animal_Shelter()
+    Billy=Dog("Billy")
+
+    animal.enqueue(Billy)
+
+    expected = "Billy"
+    actual = animal.dequeue("dog")
+
+    assert expected == actual
+
+
+def test_dequeue_other_animals():
+    """
+    Testing dequeue method for a queue
+    """
+    animal=Animal_Shelter()
+
+    Billy=Dog("Billy")
+    animal.enqueue(Billy)
+
+    Lucy=Cat("Lucy")
+    animal.enqueue(Lucy)
+
+    expected = None
+    actual = animal.dequeue("wolf")
 
     assert expected == actual
 
 
 
 
-def test_dequeue_empty_dog():
-    """
-    Testing dequeue method for a queue
-    """
-    with pytest.raises(Exception):
-        dog_queue = Animal_Shelter()
 
-
-        dog_queue.dequeue("dog")
 
 
 
@@ -91,9 +95,22 @@ def test_dequeue_empty_cat():
     Testing dequeue method for a queue
     """
     with pytest.raises(Exception):
-        cat_queue = Animal_Shelter()
+        animal=Animal_Shelter()
+        Lucy=Cat("Lucy")
+
+        animal.dequeue("cat")
 
 
-        cat_queue.dequeue("cat")
+def test_dequeue_empty_dog():
+    """
+    Testing dequeue method for a queue
+    """
+    with pytest.raises(Exception):
+        animal=Animal_Shelter()
+        Billy=Dog("Billy")
+
+        animal.dequeue("dog")
+
+
 
 

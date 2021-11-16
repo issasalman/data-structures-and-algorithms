@@ -18,7 +18,7 @@ Space O(n)
 
 Input	                  Args	          Output
 
-[cat]->[cat]->[cat]      	cat	      [cat]->[cat]->[cat]  ->[cat]
+[cat]->[cat]->[cat]      	cat1	      [cat]->[cat]->[cat]  ->[cat1]
 Input	                              [dog]->[dog]->[dog]->[dog]
 [dog]->[dog]->[dog]->[dog]
 
@@ -28,7 +28,7 @@ Input	                              [dog]->[dog]->[dog]->[dog]
 
 Input	                  Args	          Output
 
-[cat]->[cat]->[cat]      	cat	      [cat]->[cat]
+[cat]->[cat]->[cat1]      	cat1      [cat]->[cat]
 Input	                              [dog]->[dog]->[dog]->[dog]
 [dog]->[dog]->[dog]->[dog]
 
