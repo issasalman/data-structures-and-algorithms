@@ -1,16 +1,18 @@
+from stack_and_queue.Stack import Stack
+
 def validate_brackets(brackets):
     """
     Function to check validate brackets to be balanced in closed in right order
 
     """
-    stack = []
+    stack = Stack()
     i=0
     while  i < len (brackets):
         if brackets[i] in ["(", "{", "["]:
-            stack.append(brackets[i])
+            stack.push(brackets[i])
 
         elif brackets[i] in [")", "}", "]"]:
-            if len(stack) ==0:
+            if stack.is_empty():
                 return False
             item = stack.pop()
             if item == '(':
