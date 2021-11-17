@@ -1,9 +1,31 @@
 # Challenge Summary validate_brackets
-The challenge is to make new queue following FIFO by using two stacks for that
+Function to check validate brackets to be balanced in closed in right order
 
 
+## Whiteboard Process
+![pseudo](stack_and_queue/brackets.JPG)
+
+## Approach & Efficiency
+check validate brackets to be balanced in closed in right order
+Big O : O(n)
+Space O(1)
+
+## Solution
+
+function validate
+ Arguments: string
+Return: boolean
+representing whether or not the brackets in the string are balanced
+```
+Verification
+Input: "{}(){}"
+output True
 
 
+Input: "{(})"
+output False
+
+```
 
 # Challenge Summary stack-queue-Shelter
 The challenge is to make new queue following FIFO by using two stacks for that
