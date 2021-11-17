@@ -34,6 +34,8 @@ print (validate_brackets("(g)"))
 print (validate_brackets("{}{Code}[Fellows](())"))
 
 print (validate_brackets("{(})"))
+print (validate_brackets("({)"))
+
 
 
 
