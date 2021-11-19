@@ -30,9 +30,6 @@ def test_enqueue_cat():
     assert expected == actual
 
 
-#
-
-
 
 
 def test_dequeue_cat():
