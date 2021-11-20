@@ -90,33 +90,24 @@ class LinkedList:
                     break
                 current = current.next
 
-
-
-
     def deleteNode(self, key):
-        current = self.head
 
         if self.head==None:
            return "empty list"
         elif self.head.value == key:
+            temp=self.head
+            self.head = temp.next
+            temp=None
 
-            self.head = self.head.next
-            current=None
-            return "Node Removed"
-
+        current = self.head
         while current.next:
             if current.next.value == key:
 
                  temp=current.next
                  current.next=temp.next
                  temp=None
-                 break
-
-            current = current.next
-
-
-
-
+            else:
+                current = current.next
 
     def deleteNodepos(self, position):
         length=0
@@ -132,25 +123,17 @@ class LinkedList:
                 length+=1
 
                 if position ==length:
-                    if current.next:
+
                         temp=current.next
                         current.next=temp.next
                         temp=None
-                        break
-                    else:
-                        current=None
-                        break
-                current = current.next
-
-
+                else:
+                        current = current.next
 
 
         if position> length:
             print('Position not found')
             return 'Position not found'
-
-
-
 
     def removeDuplicates(self):
         current = self.head
@@ -237,9 +220,6 @@ class LinkedList:
         # print(current.value)
         return(current.value)
 
-
-
-
     def delete_lastnode(self):
 
             current=self.head
@@ -253,8 +233,6 @@ class LinkedList:
             while current.next.next:
                 current =current.next
             current.next=None
-
-
 
     def kthdelete(self, k):
         """
@@ -309,7 +287,7 @@ class LinkedList:
              prev=current
              current=following
 
-        left,right=self.head,له
+        left,right=self.head,prev
         while right:
             if left.value!=right.value:
                 return False
@@ -339,8 +317,6 @@ class LinkedList:
             right.next=tmp1
             left,right=tmp1,tmp2
 
-
-
 def zipLists(list1,list2):
         current1 = list1.head
         current2 = list2.head
@@ -366,8 +342,6 @@ def zipLists(list1,list2):
                 current2.next = current1
                 current2 = current
 
-
-
 def ifsorted(head):
     current=head
     if head==None:
@@ -388,8 +362,6 @@ def ifsorted(head):
     following.value=tmp
 
 
-
-
 if __name__ == '__main__':
 
     ll1 = LinkedList()
@@ -408,9 +380,6 @@ if __name__ == '__main__':
     ll1.append(5)
     ll1.append(6)
     ll1.deleteNodepos(6)
-
-
-
 
 
 
