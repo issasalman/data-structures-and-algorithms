@@ -16,6 +16,8 @@
 | Code challenge2 | [ array insert shift ](python/code_challenges/array-insert-shift/README.md) |
 | Code challenge3 | [ array binary search ](python/code_challenges/array-binary-search/README.md) |
 | Code challenge5 | [ Linked-List-append,search ](python/code_challenges/linked-list) |
+| Code challenge10 | [ stack-and-queue ](python/code_challenges/stack-and-queue) |
+| Code challenge15 | [ Tree ](https://github.com/issasalman/data-structures-and-algorithms/pull/68) |
 
 
 
