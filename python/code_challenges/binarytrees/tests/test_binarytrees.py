@@ -12,11 +12,29 @@ def test_version():
 
 
 
+
+def test_maximum_value():
+        tree=BinaryTree()
+
+        tree.root=Node(1,Node(2,Node(3),Node(10)),Node(5,Node(6)))
+        excepted=10
+        actual=tree.max_value()
+        assert actual==excepted
+
+
+def test_maximum_value_not_number():
+     with pytest.raises(TypeError):
+            tree=BinaryTree()
+            tree.root=Node("A",Node("B"),Node("C"))
+            tree.max_value()
+
+
+
+
 def test_post_order_empty():
       with pytest.raises(Exception):
           tree=BinaryTree()
           tree.pre_order()
-
 
 
 
@@ -32,9 +50,6 @@ def test_leftchild_rightchild():
     assert tree.root.value == "A"
     assert tree.root.left.value == "B"
     assert tree.root.right.value == "C"
-
-
-
 
 
 
@@ -86,8 +101,6 @@ def test_contain():
     bst.add(7)
     assert bst.contains(7) == True
     assert bst.contains(5) == False
-
-
 
 
 

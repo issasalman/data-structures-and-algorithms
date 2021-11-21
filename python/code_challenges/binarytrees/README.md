@@ -1,3 +1,17 @@
+# Challenge Summary maximum number
+Find the maximum value stored in the tree
+## Whiteboard Process
+![maxnumber](binarytrees/maxtree.JPG)
+
+## Approach & Efficiency
+Big o
+Time : O(N)
+Space: O(N)
+
+## Solution
+Create a method that search for the maximum number and for each time save the bigger one inside max variable
+
+
 # Trees
 A tree data structure can be defined recursively as a collection of nodes, where each node is a data structure consisting of a value and a list of references to nodes. The start of the tree is the "root node" and the reference nodes are the "children". No reference is duplicated and none points to the root.
 
