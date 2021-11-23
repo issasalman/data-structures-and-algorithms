@@ -1,4 +1,3 @@
-from collections import deque
 class Node:
 
     """
@@ -9,7 +8,7 @@ class Node:
         self.next = None
 
 
-class Queue(deque):
+class Queue():
 
 
     """
@@ -40,6 +39,11 @@ class Queue(deque):
 
         if self.is_empty():
             raise Exception("The queue is empty")
+        if self.rear==self.front:
+            temp = self.front
+            self.rear =  None
+            self.front = None
+            return temp.value
         temp = self.front
         self.front = self.front.next
         temp.next = None

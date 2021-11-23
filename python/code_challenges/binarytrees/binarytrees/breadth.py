@@ -9,17 +9,17 @@ def breadth_first(tree):
     final_output = []
 
     if  tree.root:
-            queue.append(tree.root)
+            queue.enqueue(tree.root)
     else:
         return "there is no root "
 
-    while  len(queue):
-        front=queue.popleft()
+    while  queue.front and queue.rear:
+        front=queue.dequeue()
         final_output.append(front.value)
 
         if front.left :
-                queue.append(front.left)
+                queue.enqueue(front.left)
         if front.right :
-                queue.append(front.right)
+                queue.enqueue(front.right)
     return final_output
 
