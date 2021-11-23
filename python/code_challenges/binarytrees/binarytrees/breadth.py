@@ -13,7 +13,7 @@ def breadth_first(tree):
     else:
         return "there is no root "
 
-    while  queue.front and queue.rear:
+    while not queue.is_empty():
         front=queue.dequeue()
         final_output.append(front.value)
 

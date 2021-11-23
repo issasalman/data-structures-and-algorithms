@@ -63,7 +63,7 @@ class Queue():
         """
         To check if the stack is empty or not
         """
-        return self.front == None
+        return self.front == None and  self.rear==None
 
 
 if __name__ == '__main__':
