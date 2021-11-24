@@ -1,4 +1,4 @@
-from Queue import Queue
+from binarytrees.Queue import Queue
 
 class karyNode:
 
@@ -6,32 +6,33 @@ class karyNode:
         self.value = value
         self.children = children
 
-
 class karyTree:
     def __init__(self,root=None):
         self.root = root
 
 
-
 def fizz_buzz(number):
 
-    if not number % 15:
+    if  number % 15==0:
         return "FizzBuzz"
-    elif not  number%3 :
+
+    elif   number%3 ==0:
         return "Fizz"
-    elif not number%5:
+
+    elif  number%5==0:
         return "Buzz"
+
     else:
         return str(number)
 
 def fizz_buzz_tree(k_ary_tree ):
-
-    if not k_ary_tree.root:
-        return 'Tree is empty'
-
     queue = Queue()
-    queue.enqueue(k_ary_tree.root)
     kary_tree = []
+
+    if  k_ary_tree.root:
+            queue.enqueue(k_ary_tree.root)
+    else:
+        return "empty tree"
 
     while not queue.is_empty():
         front=queue.dequeue()
@@ -41,8 +42,8 @@ def fizz_buzz_tree(k_ary_tree ):
         kary_tree.append(front.value)
     return kary_tree
 
-if __name__ == '__main__':
-    tree = karyTree()
-    tree.root=karyNode(1,[karyNode(20,[karyNode(250),karyNode(35),karyNode(105)]),karyNode(3,[karyNode(333)]),karyNode(10,[karyNode(444)])])
+# if __name__ == '__main__':
+#     tree = karyTree()
+#     tree.root=karyNode(1,[karyNode(20,[karyNode(250),karyNode(35),karyNode(105)]),karyNode(3,[karyNode(333)]),karyNode(10,[karyNode(444)])])
 
-    print(fizz_buzz_tree(tree))
+#     print(fizz_buzz_tree(tree))
