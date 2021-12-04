@@ -20,9 +20,10 @@ class LinkedList:
         """
         Method to add values to the end of nodes
         """
-        node = Node(valueAdded)
         LinkedList.counter += 1
 
+
+        node = Node(valueAdded)
 
         if self.head == None:
             self.head = node
@@ -122,7 +123,6 @@ class LinkedList:
             return ("Empty")
 
 
-
     @classmethod
     def countering(cls):
         """
@@ -172,8 +172,6 @@ class LinkedList:
         return(current.value)
 
 
-
-
 def zipLists(list1,list2):
         current1 = list1.head
         current2 = list2.head
@@ -201,9 +199,6 @@ def zipLists(list1,list2):
                 current2 = temp
 
 
-
-
-
 if __name__ == '__main__':
 
     ll1 = LinkedList()
@@ -213,8 +208,6 @@ if __name__ == '__main__':
     ll1.append(5)
 
     ll2.append(5)
-
-
 
     zipLists(ll1,ll2)
     print(ll1)
