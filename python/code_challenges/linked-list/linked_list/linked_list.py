@@ -168,8 +168,21 @@ class LinkedList:
 
         for i in range(length - k -1):
             current = current.next
-        print(current.value)
+        # print(current.value)
         return(current.value)
+
+    def reverse_list(self):
+         prev=None
+         current=self.head
+         following=current.next
+         while current:
+             current.next=prev
+             prev=current
+             current=following
+             if following:
+                 following=following.next
+         self.head=prev
+
 
 
 def zipLists(list1,list2):
@@ -199,17 +212,20 @@ def zipLists(list1,list2):
                 current2 = temp
 
 
+
 if __name__ == '__main__':
 
     ll1 = LinkedList()
-    ll2 = LinkedList()
+    # ll2 = LinkedList()
 
     ll1.append(5)
-    ll1.append(5)
+    ll1.append(8)
+    ll1.append(2)
 
-    ll2.append(5)
-
-    zipLists(ll1,ll2)
+    ll1.reverse_list()
+    # ll2.append(5)
+    # print(ll1.kthFromEnd(0))
+    # zipLists(ll1,ll2)
     print(ll1)
 
 
