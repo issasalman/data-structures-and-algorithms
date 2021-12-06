@@ -14,7 +14,9 @@ Normal Array [8,4,23,42,16,15]
 
 ### In the first pass through of the insertion sort, we will swap between index 0 and 1
 
+
 ### In the second pass through of the insertion sort, we will not swap any indexes
+
 
 ### In the third pass through of the insertion sort, we will  not swap any indexes
 
