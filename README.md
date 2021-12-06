@@ -18,6 +18,7 @@
 | Code challenge5 | [ Linked-List-append,search ](python/code_challenges/linked-list) |
 | Code challenge10 | [ stack-and-queue ](python/code_challenges/stack-and-queue) |
 | Code challenge15 | [ Tree ](https://github.com/issasalman/data-structures-and-algorithms/pull/68) |
+| Code challenge26 | [ insertion sorting ](python/code_challenges/insertion_sort) |
 
 
 
