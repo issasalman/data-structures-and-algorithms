@@ -1,3 +1,18 @@
+# Challenge Summary Breadth
+to traverse the tree row by row using queue
+## Whiteboard Process
+![maxnumber](binarytrees/breadth.JPG)
+
+## Approach & Efficiency
+Big o
+Time : O(N)
+Space: O(1)
+
+## Solution
+Create a function that traverse  the tree using queue and by removing each element and push it to a array
+
+
+
 # Challenge Summary maximum number
 Find the maximum value stored in the tree
 ## Whiteboard Process

@@ -12,7 +12,6 @@ def test_version():
 
 
 
-
 def test_maximum_value():
         tree=BinaryTree()
 
