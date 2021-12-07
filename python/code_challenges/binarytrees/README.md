@@ -1,3 +1,19 @@
+# Challenge Summary fizzbuzz
+to traverse the tree row by row  using queue and then convert each number to a fizzbuzz values using fizzbuzz function
+![maxnumber](binarytrees/fizzbuzz.JPG)
+
+## Approach & Efficiency
+Big o
+Time : O(N)
+Space: O(1)
+
+## Solution
+to traverse the tree row by row what even if its have more than 2 children  using queue and then convert each number to a fizzbuzz values using fizzbuzz function that check every number and convert it to a fizz,buzz,fizzbuzz or a string of number
+
+
+
+
+
 # Challenge Summary Breadth
 to traverse the tree row by row using queue
 ## Whiteboard Process
