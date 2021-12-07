@@ -28,9 +28,9 @@ class BinaryTree:
 
         def traverse(root):
             output.append(root.value)
-            if root.left is not None:
+            if root.left :
                 traverse(root.left)
-            if root.right is not None:
+            if root.right :
                 traverse(root.right)
 
         traverse(self.root)
@@ -46,11 +46,11 @@ class BinaryTree:
             raise Exception('Empty Tree')
 
         def traverse(root):
-            if root.left is not None:
+            if root.left :
                 traverse(root.left)
             output.append(root.value)
 
-            if root.right is not None:
+            if root.right :
                 traverse(root.right)
 
         traverse(self.root)
@@ -67,10 +67,10 @@ class BinaryTree:
             raise Exception('Empty Tree')
 
         def traverse(root):
-            if root.left is not None:
+            if root.left :
                 traverse(root.left)
 
-            if root.right is not None:
+            if root.right :
                 traverse(root.right)
 
             output.append(root.value)
@@ -78,6 +78,32 @@ class BinaryTree:
 
         traverse(self.root)
         return output
+
+    def  max_value(self):
+        """
+        find maximum value in the tree
+
+        """
+        if not self.root :
+            raise Exception('Empty Tree')
+
+
+        self.maximum=self.root.value
+        def traverse(node):
+            if node.value >  self.maximum :
+                self.maximum = node.value
+            if node.left:
+                traverse(node.left)
+            if node.right:
+                traverse(node.right)
+
+        traverse(self.root)
+        return  self.maximum
+
+
+
+
+
 
 
 
@@ -143,16 +169,17 @@ def create_tree():
 
 if __name__ == "__main__":
     tree=BinaryTree()
-    tree.root=Node("A",Node("B",Node("D"),Node("E")),Node("C",Node("F")))
+    tree.root=Node(1,Node(2,Node(3),Node(10)),Node(5,Node(6)))
 
-    print(tree.pre_order())
-    print(tree.in_order())
-    print(tree.post_order())
+    # print(tree.pre_order())
+    # print(tree.in_order())
+    # print(tree.post_order())
 
 
     # tree1=BinarySearch()
 
     # print( tree1.add("a"))
     # print(tree1.contains('a'))
+    print(tree.max_value())
 
 
