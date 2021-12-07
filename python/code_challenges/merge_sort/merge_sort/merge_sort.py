@@ -18,10 +18,16 @@ def merge_sort(arr):
         print("right",right)
         print("arr",arr)
         print("")
-        
 
         merge_sort(left)
         merge_sort(right)
+        print("")
+
+        print("left1",left)
+        print("right1",right)
+        print("arr1",arr)
+        print("")
+
         return  merge(left,right,arr)
 
 def merge(left,right,merging_arr):
