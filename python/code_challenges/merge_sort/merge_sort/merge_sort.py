@@ -18,6 +18,8 @@ def merge_sort(arr):
         print("right",right)
         print("arr",arr)
         print("")
+        
+
         merge_sort(left)
         merge_sort(right)
         return  merge(left,right,arr)
