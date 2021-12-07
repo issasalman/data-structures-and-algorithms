@@ -19,6 +19,8 @@
 | Code challenge10 | [ stack-and-queue ](python/code_challenges/stack-and-queue) |
 | Code challenge15 | [ Tree ](https://github.com/issasalman/data-structures-and-algorithms/pull/68) |
 | Code challenge26 | [ insertion sorting ](https://github.com/issasalman/data-structures-and-algorithms/pull/72) |
+| Code challenge27 | [ merge sorting ](https://github.com/issasalman/data-structures-and-algorithms/pull/73) |
+| Code challenge28 | [ quick sorting ](https://github.com/issasalman/data-structures-and-algorithms/pull/74) |
 
 
 
