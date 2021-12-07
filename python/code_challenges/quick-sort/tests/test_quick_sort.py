@@ -7,8 +7,8 @@ def test_version():
 
 
 def test_quick_sort():
-    expected =[1, 2, 5, 7, 9, 12]
-    arr=[12, 1, 9, 5, 2, 7]
+    expected =[4, 8, 15, 16, 23, 42]
+    arr=[8,4,23,42,16,15]
     actual=quick_sort(arr,0,(len(arr)-1))
     assert expected==actual
 
