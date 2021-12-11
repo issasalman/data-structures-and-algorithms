@@ -16,10 +16,12 @@ def quick_sort(arr, left, right):
 
         return arr
 
+
 def partition(arr, left, right):
     print("leftp",left)
     print("rightp",right)
     # print("arrp",arr)
+
 
     print("")
     pivot = arr[right]
