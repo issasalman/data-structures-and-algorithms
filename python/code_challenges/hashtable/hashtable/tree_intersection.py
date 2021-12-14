@@ -19,7 +19,7 @@ def tree_intersection(Tree1,Tree2):
     return nodes_intersection
 
 if __name__ == '__main__':
-    
+
     tree1 = BinaryTree()
     tree1.root=Node(1,Node(4,Node(3),Node(55)),Node(2,Node(3)))
 

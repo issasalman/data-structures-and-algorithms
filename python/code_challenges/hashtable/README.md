@@ -1,3 +1,25 @@
+ ## Challenge left_join
+
+Write a function called left join to check every key Synonym with its Antonym
+
+## Whiteboard Process
+
+![join_left](hashtable/left_join.JPG)
+
+## Approach & Efficiency
+
+The Efficiency of the Big O time is O(n)
+
+The Efficiency of the Big O space is O(n)
+
+## Solution
+
+    Write a function called left join take two hash maps
+
+        Arguments: two hash maps
+        Return: The returned data structure that holds the results is up to you.
+
+
  # Challenge Summary
 
 Write a function called tree_intersection that takes two binary trees as parameters adn return the repeated nodes.

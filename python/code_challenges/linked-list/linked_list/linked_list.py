@@ -358,6 +358,26 @@ def zipLists(list1,list2):
                 current = current2.next
                 current2.next = current1
                 current2 = current
+def ifsorted(head):
+    current=head
+    if head==None:
+        return "empty"
+    if head.next==None:
+        return True
+    following=current.next
+    while current.next.next:
+        tmp=current.value
+        current.value=following.value
+        following.value=tmp
+        current=current.next.next
+        following=current.next
+        if current.next==None:
+             return 'hi'
+    tmp=current.value
+    current.value=following.value
+    following.value=tmp
+
+
 
 
 if __name__ == '__main__':
@@ -370,7 +390,17 @@ if __name__ == '__main__':
 
     # ll1.head.next.next=Node(3)
 
-    ll1.append(21)
+    ll1.append(1)
+    ll1.append(2)
+
+    ll1.append(3)
+    ll1.append(4)
+    ll1.append(5)
+    ll1.append(6)
+
+
+
+
 
 
     # ll2.append(344)
@@ -378,11 +408,11 @@ if __name__ == '__main__':
     # ll2.append(44)
     # ll2.append(49)
     # ll2.append(41)
-
-
     print(ll1)
 
-    ll1.delete_lastnode()
+    print(ifsorted(ll1.head))
+
+
 
     # print(ll1.kthFromEnd(2))
 
