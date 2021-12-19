@@ -21,6 +21,14 @@
 | Code challenge26 | [ insertion sorting ](https://github.com/issasalman/data-structures-and-algorithms/pull/72) |
 | Code challenge27 | [ merge sorting ](https://github.com/issasalman/data-structures-and-algorithms/pull/73) |
 | Code challenge28 | [ quick sorting ](https://github.com/issasalman/data-structures-and-algorithms/pull/74) |
+| Code challenge29 | [ hashtable ](https://github.com/issasalman/data-structures-and-algorithms/pull/75) |
+| Code challenge30 | [Hashmap repeated word ](https://github.com/issasalman/data-structures-and-algorithms/pull/76) |
+| Code challenge31 | [Tree intersection ](https://github.com/issasalman/data-structures-and-algorithms/pull/77) |
+| Code challenge32 | [Hashmap left join ](https://github.com/issasalman/data-structures-and-algorithms/pull/78) |
+| Code challenge33 | [graph ](https://github.com/issasalman/data-structures-and-algorithms/pull/79) |
+
+
+
 
 
 
