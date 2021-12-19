@@ -30,11 +30,15 @@ class Queue:
 
         if self.is_empty():
             raise Exception("The queue is empty")
+        if self.rear==self.front:
+            temp = self.front
+            self.rear =  None
+            self.front = None
+            return temp.value
         temp = self.front
         self.front = self.front.next
         temp.next = None
         return temp.value
-
     def peek(self):
         """
         to know the front

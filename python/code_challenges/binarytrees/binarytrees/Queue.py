@@ -68,18 +68,15 @@ class Queue():
 
 if __name__ == '__main__':
         test=Queue()
+        test.enqueue(1)
 
 
-        test.append(22)
-
-        test.append(21)
-        print(test.popleft())
 
 
 
         # print(test.dequeue())
         # print(test.dequeue())
-
+print(test.peek())
         # print(test.dequeue())
 
 

@@ -57,7 +57,6 @@ class BinaryTree:
         return output
 
 
-
     def post_order(self):
         """
         Traverse way called Depth First follows this order left >> right >> root
@@ -99,12 +98,6 @@ class BinaryTree:
 
         traverse(self.root)
         return  self.maximum
-
-
-
-
-
-
 
 
 class BinarySearch(BinaryTree):
@@ -162,14 +155,38 @@ class BinarySearch(BinaryTree):
                         return False
             return traverse(self.root)
 
+def amx_number(tree):
+    root=tree.root
+    if not root:
+      return "empty tree"
+    max_num=tree.root.value
+    max_last1=max_num
+    max_last2=max_num
+    def traverse (node):
+        nonlocal max_num
+        nonlocal max_last1
+        nonlocal max_last2
 
+
+
+        if node.left:
+           traverse(node.left)
+        if node.value>max_num:
+           max_last1=node.value
+        if node.right:
+          traverse(node.right)
+        if node.value>max_num:
+           max_num=node.value
+
+    traverse(root)
+    return max_last1
 
 def create_tree():
     return tree
 
 if __name__ == "__main__":
     tree=BinaryTree()
-    tree.root=Node(1,Node(2,Node(3),Node(10)),Node(5,Node(6)))
+    tree.root=Node(1,Node(21,Node(3),Node(10)),Node(5,Node(6)))
 
     # print(tree.pre_order())
     # print(tree.in_order())
@@ -180,6 +197,6 @@ if __name__ == "__main__":
 
     # print( tree1.add("a"))
     # print(tree1.contains('a'))
-    print(tree.max_value())
+    print(amx_number(tree))
 
 
