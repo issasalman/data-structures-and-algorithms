@@ -8,7 +8,8 @@ class HashTable:
 
         self.size = size
         self.map = [None] * self.size
-        # self.key=""
+        self.keys = []
+        self.chain = LinkedList()
 
 
     def hash(self,key):
@@ -21,7 +22,8 @@ class HashTable:
             ascii_sum=key
         else:
             for char in key:
-                ascii_sum+=ord(char)
+
+                 ascii_sum+=ord(char)
         return ascii_sum*11 % self.size
 
 
@@ -33,22 +35,30 @@ class HashTable:
         hashed_key = self.hash(key)
         if not self.map[hashed_key]:
             self.map[hashed_key] = [key,value]
+
+            self.keys.append(key)
             return [key,value]
             # self.key = [key,value]
         else:
+
+            diction={key:value}
+            self.keys.append(diction)
             if isinstance(self.map[hashed_key], LinkedList):
+
+
                 self.map[hashed_key].append([key,value])
                 return [key,value]
             else:
 
-                chain = LinkedList()
+                # chain = LinkedList()
 
                 # existing_pair = self.key
                 existing_pair= self.map[hashed_key]
                 new_pair =[key,value]
-                self.map[hashed_key]=chain
-                chain.append((existing_pair))
-                chain.append(new_pair)
+                self.map[hashed_key]=self.chain
+                self.chain.append((existing_pair))
+                self.chain.append(new_pair)
+
                 return new_pair
         # if type(  self.map[hashed_key])== list:
         #      self.map[hashed_key]= self.map[hashed_key][1]
@@ -107,7 +117,7 @@ if __name__ == '__main__':
     # hashtable.get('issa')
     hashtable.contains("werw")
 
-
+    print(hashtable.keys)
 
     for hashed_key, item in enumerate(hashtable.map):
         if item:
