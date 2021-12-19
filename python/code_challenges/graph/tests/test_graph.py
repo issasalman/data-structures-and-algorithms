@@ -47,6 +47,25 @@ def test_get_nodes():
     graph.add_node(2)
     assert graph.size() == 2
 
+def test_get_neighbors():
+    graph = Graph()
+    v1 = graph.add_node('amman')
+    v2 = graph.add_node('zarqa')
+    v3 = graph.add_node('salt')
+
+    graph.add_edge(v1, v2, 27)
+    graph.add_edge(v1, v3, 87)
+
+    neighbors = graph.get_neighbors(v1)
+    assert len(neighbors) == 2
+    neighbor_edge1 = neighbors[0]
+    assert neighbor_edge1.vertex.value == 'zarqa'
+    assert neighbor_edge1.weight == 27
+
+
+    neighbor_edge2 = neighbors[1]
+    assert neighbor_edge2.vertex.value == 'salt'
+    assert neighbor_edge2.weight == 87
 
 def test_nodes_in_graph():
     graph = Graph()
@@ -64,9 +83,9 @@ def test_edges_in_graph():
     v3=graph.add_node(9)
     graph.add_edge(v1, v2, 1)
     graph.add_edge(v1, v3, 2)
-    actual = graph.get_neighbors(v1)
-    edge1 = actual[0]
-    edge2 = actual[1]
+    neighbors = graph.get_neighbors(v1)
+    edge1 = neighbors[0]
+    edge2 = neighbors[1]
     assert edge1.vertex == v2
     assert edge1.weight == 1
     assert edge2.vertex == v3

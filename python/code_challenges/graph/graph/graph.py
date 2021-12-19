@@ -66,7 +66,7 @@ class Graph:
     if start_vertex not in self._adjacency_list:
       raise KeyError("Start Vertex is not found")
     if end_vertex not in self._adjacency_list:
-      raise KeyError("Start Vertex is not found")
+      raise KeyError("End Vertex is not found")
     edge = Edge(end_vertex, weight)
     self._adjacency_list[start_vertex].append(edge)
 
@@ -77,7 +77,7 @@ class Graph:
     qualifier: Get all neighbors for a vertex
     Return: a list of edges
     """
-    return self._adjacency_list[vertex]
+    return self._adjacency_list.get(vertex, [])
 
 
 
@@ -98,4 +98,3 @@ class Graph:
     Return: int The size(the length of _adjacency_list)
     """
     return len(self._adjacency_list)
-  
