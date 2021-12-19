@@ -86,7 +86,8 @@ class BinaryTree:
         if not self.root :
             raise Exception('Empty Tree')
 
-        self.maximum=0
+
+        self.maximum=self.root.value
         def traverse(node):
             if node.value >  self.maximum :
                 self.maximum = node.value
