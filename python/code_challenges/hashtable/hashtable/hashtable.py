@@ -17,9 +17,15 @@ class HashTable:
 
         """
         ascii_sum=0
-        for char in key:
-            ascii_sum+=ord(char)
+        if type(key) == int:
+            ascii_sum=key
+        else:
+            for char in key:
+                ascii_sum+=ord(char)
         return ascii_sum*11 % self.size
+
+
+
 
     def add(self, key, value):
 

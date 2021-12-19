@@ -1,4 +1,23 @@
  # Challenge Summary
+
+Write a function called tree_intersection that takes two binary trees as parameters adn return the repeated nodes.
+
+## Whiteboard Process
+
+![intersection](hashtable/tree_intersection.JPG)
+
+## Approach & Efficiency
+
+The Efficiency of the Big O time is O(n)
+
+The Efficiency of the Big O space is O(n)
+
+## Solution
+
+Make function that take two trees and search for the nodes in the two trees and if any intersection between tree1 and tree2 nodes return them.
+
+
+ # Challenge Summary
  a function called repeated word that finds the first word to occur more than once in a string
 
 
