@@ -358,6 +358,9 @@ def zipLists(list1,list2):
                 current = current2.next
                 current2.next = current1
                 current2 = current
+
+
+                
 def ifsorted(head):
     current=head
     if head==None:

@@ -98,3 +98,56 @@ class Graph:
     Return: int The size(the length of _adjacency_list)
     """
     return len(self._adjacency_list)
+
+
+  def bfs(self, start_vertex):
+
+    queue = Queue()
+    result = []
+    visited = set()
+
+    queue.enqueue(start_vertex)
+    visited.add(start_vertex)
+    result.append(start_vertex.value)
+
+    while len(queue):
+      current_vertex = queue.dequeue()
+
+      neighbors = self.get_neighbors(current_vertex)
+
+      for edge in neighbors:
+        neighbor = edge.vertex
+
+        if neighbor not in visited:
+          queue.enqueue(neighbor)
+          visited.add(neighbor)
+          result.append(neighbor.value)
+
+    return result
+
+
+
+# if __name__ == '__main__':
+#     graph = Graph()
+#     a = graph.add_node('a')
+#     b = graph.add_node('b')
+#     c = graph.add_node('c')
+#     d = graph.add_node('d')
+#     e = graph.add_node('e')
+#     f = graph.add_node('f')
+#     # g = graph.add_node('g')
+#     # h = graph.add_node('h')
+#     # i = graph.add_node('i')
+#     # k = graph.add_node('k')
+#     graph.add_edge(a, b)
+#     graph.add_edge(a, c)
+#     graph.add_edge(a,e)
+#     graph.add_edge(b, d)
+#     graph.add_edge(c, f)
+#     # graph.add_edge(c, b)
+#     graph.add_edge(d,e)
+#     # graph.add_ed
+#     for i in graph.bfs(a):
+#       print( i.value)
+
+#     # print((graph.bfs(c)))
