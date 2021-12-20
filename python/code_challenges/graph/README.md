@@ -1,23 +1,24 @@
-# Graphs BFS
+# Challenge Summary Graphs BFS
 
 Breadth First Search (BFS) algorithm traverses a graph in a breadthward motion and uses a queue to remember to get the next vertex to start a search, when a dead end occurs in any iteration.
 
 
-## Challenge
-
-Create a BFS method for  graph class in order to traverse a graph
-
+## Whiteboard Process
+![bfs](graph/bfs.JPG)
 ## Approach & Efficiency
 
 The Efficiency of the Big O time is O(N^2)
 
 The Efficiency of the Big O space is O(N)
 
-## API
+## API and Solution
 
 breadth first
+
 Arguments: Node
+
 Return: A collection of nodes in the order they were visited.
+
 Display the collection
 
 
