@@ -1,3 +1,26 @@
+# Challenge Summary
+
+Write a function called business trip that take arguments: graph, array of city names and  Determine whether the trip is possible with direct flights, and how much it would cost.
+
+## Whiteboard Process
+
+![trip](graph/trip.JPG)
+
+## Approach & Efficiency
+
+The Efficiency of the Big O time is O(n^2)
+
+The Efficiency of the Big O space is O(n)
+
+## Solution
+
+Write a function called business trip that determin the cost of anypath between nodes
+
+    Arguments: graph, array of city names
+    Return: cost or null
+
+
+
 # Challenge Summary Graphs BFS
 
 Breadth First Search (BFS) algorithm traverses a graph in a breadthward motion and uses a queue to remember to get the next vertex to start a search, when a dead end occurs in any iteration.
