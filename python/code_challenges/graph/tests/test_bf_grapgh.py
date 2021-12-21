@@ -3,56 +3,63 @@ from graph.graph import Graph
 import pytest
 
 
-def test_bfs_graph():
+def test_dfs_graph():
     graph = Graph()
     v1=graph.add_node(5)
     v2=graph.add_node(7)
     v3=graph.add_node(9)
     graph.add_edge(v1, v2, 1)
     graph.add_edge(v1, v3, 2)
-    actual = graph.bfs(v1)
-    assert actual == [5, 7, 9]
+    actual = graph.dfs(v1)
+    assert actual == [5, 9, 7]
     assert graph.size() == 3
 
-def test_bfs_with_root_Pandora(bfs):
-    graph = bfs[0]
-    pandora=bfs[1]
-    assert graph.bfs(pandora) == ["Pandora", "Arendelle","Metroville", "Monstroplolis","Narnia","Naboo"]
+def test_dfs_with_root_Pandora(dfs):
+    graph = dfs[0]
+    pandora=dfs[1]
+    assert graph.dfs(pandora) == ['Pandora', 'Metroville', 'Naboo', 'Narnia', 'Monstroplolis', 'Arendelle']
 
 
-def test_bfs_with_root_Metroville(bfs):
-    graph = bfs[0]
-    narnia=bfs[3]
-    assert graph.bfs(narnia) ==["Metroville", "Arendelle","Monstroplolis", "Narnia","Naboo","Pandora"]
-    
+def test_dfs_with_root_Metroville(dfs):
+    graph = dfs[0]
+    narnia=dfs[3]
+    assert graph.dfs(narnia) ==['Metroville', 'Pandora', 'Naboo', 'Narnia', 'Monstroplolis', 'Arendelle']
+
 @pytest.fixture
-def bfs():
+def dfs():
     graph = Graph()
-    v1=graph.add_node("Pandora")
-    v2=graph.add_node("Arendelle")
-    v3=graph.add_node('Metroville')
-    v4=graph.add_node('Monstroplolis')
-    v5=graph.add_node('Narnia')
-    v6=graph.add_node('Naboo')
+    Pandora=graph.add_node("Pandora")
+    Arendelle=graph.add_node("Arendelle")
+    Metroville=graph.add_node('Metroville')
+    Monstroplolis=graph.add_node('Monstroplolis')
+    Narnia=graph.add_node('Narnia')
+    Naboo=graph.add_node('Naboo')
 
-    graph.add_edge(v1, v2, 1)
-    graph.add_edge(v2, v1, 1)
+    graph.add_edge(Pandora, Arendelle,150)
+    graph.add_edge(Arendelle, Pandora,150)
 
-    graph.add_edge(v2, v3, 1)
-    graph.add_edge(v2, v4, 1)
-    graph.add_edge(v3, v2, 1)
-    graph.add_edge(v4, v2, 1)
+    graph.add_edge(Arendelle, Metroville,99)
+    graph.add_edge(Arendelle, Monstroplolis,42)
+    graph.add_edge(Metroville, Arendelle,99)
+    graph.add_edge(Monstroplolis, Arendelle,42)
 
-    graph.add_edge(v3, v4, 1)
-    graph.add_edge(v4, v3, 1)
-    graph.add_edge(v3, v5, 1)
-    graph.add_edge(v5, v3, 1)
-    graph.add_edge(v3, v6, 1)
-    graph.add_edge(v6, v3, 1)
+    graph.add_edge(Metroville, Monstroplolis,105)
+    graph.add_edge(Monstroplolis, Metroville,105)
+    graph.add_edge(Metroville, Narnia,37)
+    graph.add_edge(Narnia, Metroville,37)
+    graph.add_edge(Metroville, Naboo,26)
+    graph.add_edge(Metroville, Pandora,82)
+    graph.add_edge(Pandora, Metroville,82)
 
-    graph.add_edge(v5, v6, 1)
-    graph.add_edge(v6, v5, 1)
 
-    graph.add_edge(v6, v4, 1)
+    graph.add_edge(Naboo, Metroville,26)
 
-    return graph,v1,v2,v3,v4,v5,v6
+    graph.add_edge(Narnia, Naboo,250)
+    graph.add_edge(Naboo, Narnia,250)
+
+    graph.add_edge(Naboo, Monstroplolis,73)
+    graph.add_edge(Monstroplolis, Naboo,73)
+
+
+    return graph,Pandora,Arendelle,Metroville,Monstroplolis,Narnia,Naboo
+
