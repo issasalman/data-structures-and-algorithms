@@ -1,22 +1,4 @@
-# Depth First Traversal
-
-Depth-first search (DFS) is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking.
-## Challenge
-
-create a function that take a start node (node to search) and the output will be path in DFS logic it will be a list of node.
-
-## Approach & Efficiency
-
-The Efficiency of the Big O time is O(n^2)
-
-The Efficiency of the Big O space is O(n)
-
-## Solution
-
-![dfs](graph/dfs.JPG)
-
-
-# Challenge Summary
+# Challenge Summary Trip
 
 Write a function called business trip that take arguments: graph, array of city names and  Determine whether the trip is possible with direct flights, and how much it would cost.
 

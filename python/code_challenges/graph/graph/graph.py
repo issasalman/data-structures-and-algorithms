@@ -14,18 +14,6 @@ class Queue:
   def __len__(self):
     return len(self.dq)
 
-class Stack:
-    def __init__(self):
-        self.dq = deque()
-
-    def push(self, value):
-        self.dq.append(value)
-
-    def pop(self):
-        return self.dq.pop()
-
-    def __len__(self):
-        return len(self.dq)
 
 
 
@@ -138,33 +126,6 @@ class Graph:
 
         return result
 
-    def dfs(self, start_vertex):
-        """
-        Perform a depth first search on the graph in pre order traversal
-        Arguments: start_vertex
-        Returns: collection of nodes
-        """
-        stack = Stack()
-        pre_output = []
-        visited = set()
-
-        stack.push(start_vertex)
-        visited.add(start_vertex)
-
-
-        while stack:
-            current_vertex = stack.pop()
-
-
-            pre_output.append(current_vertex.value)
-            neighbors = self.get_neighbors(current_vertex)
-            for edge in neighbors :
-                neighbor = edge.vertex
-                if edge.vertex not in visited:
-                    visited.add(neighbor)
-                    stack.push(neighbor)
-
-        return pre_output
 
 if __name__ == '__main__':
     graph = Graph()
@@ -200,7 +161,7 @@ if __name__ == '__main__':
     graph.add_edge(Naboo, Monstroplolis, 73)
     graph.add_edge(Monstroplolis, Naboo, 73)
 
-    for i in graph.dfs(Pandora):
+    for i in graph.bfs(Pandora):
       print( i)
 
     # print((graph.bfs(c)))
