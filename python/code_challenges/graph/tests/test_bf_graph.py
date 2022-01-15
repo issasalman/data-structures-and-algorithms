@@ -24,6 +24,7 @@ def test_bfs_with_root_Metroville(bfs):
     graph = bfs[0]
     narnia=bfs[3]
     assert graph.bfs(narnia) ==["Metroville", "Arendelle","Monstroplolis", "Narnia","Naboo","Pandora"]
+
 @pytest.fixture
 def bfs():
     graph = Graph()
