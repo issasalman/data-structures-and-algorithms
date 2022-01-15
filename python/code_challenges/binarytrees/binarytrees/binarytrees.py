@@ -100,6 +100,8 @@ class BinaryTree:
         return  self.maximum
 
 
+
+
 class BinarySearch(BinaryTree):
     """
     A class to build a sorted  binary tree that has maximum 2 children to make the searching faster
@@ -160,26 +162,26 @@ def amx_number(tree):
     if not root:
       return "empty tree"
     max_num=tree.root.value
-    max_last1=max_num
-    max_last2=max_num
+    # max_last1=max_num
+    # max_last2=max_num
     def traverse (node):
         nonlocal max_num
-        nonlocal max_last1
-        nonlocal max_last2
+        # nonlocal max_last1
+        # nonlocal max_last2
 
-
-
-        if node.left:
-           traverse(node.left)
-        if node.value>max_num:
-           max_last1=node.value
-        if node.right:
-          traverse(node.right)
         if node.value>max_num:
            max_num=node.value
 
+        if node.left:
+           traverse(node.left)
+        # if node.value>max_num:
+        #    max_last1=node.value
+        if node.right:
+          traverse(node.right)
+
+
     traverse(root)
-    return max_last1
+    return max_num
 
 def create_tree():
     return tree
