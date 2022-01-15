@@ -76,7 +76,7 @@ if __name__ == '__main__':
 
         # print(test.dequeue())
         # print(test.dequeue())
-print(test.peek())
+# print(test.peek())
         # print(test.dequeue())
 
 

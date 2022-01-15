@@ -360,7 +360,7 @@ def zipLists(list1,list2):
                 current2 = current
 
 
-                
+
 def ifsorted(head):
     current=head
     if head==None:
@@ -428,4 +428,3 @@ if __name__ == '__main__':
     # print(ll1.kthFromEnd(0))
     # print(zipLists(ll1,ll2))
     print(ll1)
-
