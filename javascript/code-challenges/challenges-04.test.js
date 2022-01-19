@@ -318,8 +318,20 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 
 const sortSchedule = (arr) => {
   let arr1 = arr.sort((a, b) => {
-    a = a.lastName.toLowerCase();
-    b = b.lastName.toLowerCase();
+    let day1 = a.dayOfWeek.toLowerCase();
+    let day2 = b.dayOfWeek.toLowerCase();
+
+    if (day1 == day2 && a.start == b.start) {
+      a = a.end - a.start;
+      b = b.end - b.start;
+    } else if (day1 == day2) {
+      a = a.start;
+      b = b.start;
+    } else {
+      a = sorter[day1];
+      b = sorter[day2];
+    }
+
     if (a > b) {
       return 1;
     } else if (a < b) {
@@ -519,7 +531,7 @@ describe("Testing challenge 12", () => {
   });
 });
 
-xdescribe("Testing challenge 13", () => {
+describe("Testing challenge 13", () => {
   test("It should sort meetings by when they happen", () => {
     expect(sortSchedule(meetings)).toStrictEqual([
       new Meeting("Monday", "0900", "0945"),
