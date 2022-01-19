@@ -225,7 +225,21 @@ const people = [
 ];
 
 const sortPeople = (arr) => {
-  // Solution code here...
+  let arr1= arr.sort((a, b) => {
+    a=a.lastName.toLowerCase();
+    b=b.lastName.toLowerCase();
+   if (a > b) {
+     return 1;
+   }
+
+  else if(a < b) {
+     return -1;
+   }
+
+  else{return 0;}
+ });
+ return arr1
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -380,7 +394,7 @@ describe('Testing challenge 9', () => {
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should sort people by their last names', () => {
     expect(sortPeople(people)).toStrictEqual([
       new Person('Casey', 'Codefellow', 38),
