@@ -107,11 +107,6 @@ function duplicateArr (arr){
 }
 
 
-let x = 3;
-let y = 7;
-//output
-//x = 7;
-//y = 5;
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
@@ -124,6 +119,22 @@ function swip (x,y){
   y = x-y;
   x = x-y;
   return {'x' : x,'y' : y}
+}
+
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 7
+
+Write a function that takes array of numbers and return the repeated one
+------------------------------------------------------------------------------------------------ */
+
+
+function repeatedNum (num){
+  let sum = 0;
+  for (let i = 0; i< num.length; i++){
+    sum+= num[i];
+  }
+  let result = sum-45;
+  return result;
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 describe("Testing challenge 1", () => {
@@ -163,6 +174,12 @@ describe("Testing challenge 6", () => {
 });
 
 
+
+describe("Testing challenge 7", () => {
+  test("It should return the rep number", () => {
+    expect(repeatedNum([1,2,4,3,5,6,7,8,8,9])).toStrictEqual(8);
+  });
+});
 
 
 
