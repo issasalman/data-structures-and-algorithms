@@ -106,6 +106,25 @@ function duplicateArr (arr){
   return arr;
 }
 
+
+let x = 3;
+let y = 7;
+//output
+//x = 7;
+//y = 5;
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 6
+
+Write a function that takes two numbers and swap it
+------------------------------------------------------------------------------------------------ */
+
+
+function swip (x,y){
+  x = x+y;
+  y = x-y;
+  x = x-y;
+  return {'x' : x,'y' : y}
+}
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 describe("Testing challenge 1", () => {
   test("It should return a new shuffle array", () => {
@@ -132,11 +151,16 @@ describe("Testing challenge 4", () => {
 });
 
 describe("Testing challenge 5", () => {
-  test("It should rearrange the string", () => {
+  test("It should duplicate the array", () => {
     expect(duplicateArr([1,2,3])).toStrictEqual([1,2,3,1,2,3]);
   });
 });
 
+describe("Testing challenge 6", () => {
+  test("It should swap the numebrs", () => {
+    expect(swip(5,8)).toStrictEqual({"x":8,"y":5});
+  });
+});
 
 
 
