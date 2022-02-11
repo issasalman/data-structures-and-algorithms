@@ -136,6 +136,25 @@ function repeatedNum (num){
   let result = sum-45;
   return result;
 }
+/* ------------------------------------------------------------------------------------------------
+
+CHALLENGE 8
+
+Write a function that takes array of numbers and return the repeated one
+------------------------------------------------------------------------------------------------ */
+
+
+
+function idxOf1stRepeated (ex){
+  let idx ;
+  for (let i=0; i<ex.length; i++){
+     if (ex.indexOf(ex[i]) !== i) {
+    idx = ex.indexOf(ex[i])
+  }
+  }
+  return idx
+}
+
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 describe("Testing challenge 1", () => {
   test("It should return a new shuffle array", () => {
@@ -180,6 +199,14 @@ describe("Testing challenge 7", () => {
     expect(repeatedNum([1,2,4,3,5,6,7,8,8,9])).toStrictEqual(8);
   });
 });
+
+describe("Testing challenge 8", () => {
+  test("It should return first repeated number index", () => {
+    expect(idxOf1stRepeated([1,2,3,4,7,9,5,8,9])).toStrictEqual(5);
+  });
+});
+
+
 
 
 
